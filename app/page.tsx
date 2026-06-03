@@ -31,7 +31,7 @@ const NODES: AccessNodeProps[] = [
     description:
       "Private transmissions, structural updates and early access points delivered outside public feeds. No optimization. No engagement traps. Only sustained signal. A direct line to the evolving architecture.",
     action: "ESTABLISH LINK_",
-    href: "https://bio.site/exit_terminal", // → private channel / list
+    href: "#", // → private channel / list
   },
 ]
 
