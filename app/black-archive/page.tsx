@@ -18,7 +18,7 @@ const ARCHIVE_NODES: AccessNodeProps[] = [
     description:
       "Compiled intelligence on subjects, systems and anomalies. Names redacted. Patterns preserved. Each file is a fragment of a larger structure waiting to be assembled.",
     action: "OPEN DOSSIER_",
-    href: "#",
+    href: "/node-expansion",
   },
   {
     node: "02",
@@ -27,7 +27,7 @@ const ARCHIVE_NODES: AccessNodeProps[] = [
     description:
       "Narrative artifacts recovered from the deeper layer. Fiction and intelligence blur here. What reads like a story may be a leak. What reads like a leak may be a warning.",
     action: "DECODE FILE_",
-    href: "#",
+    href: "/node-expansion",
   },
   {
     node: "03",
@@ -36,7 +36,7 @@ const ARCHIVE_NODES: AccessNodeProps[] = [
     description:
       "Reports filed from inside the system. Raw, unedited, unverified. Observations gathered before the noise had a chance to bury them. Read with caution.",
     action: "RETRIEVE REPORT_",
-    href: "#",
+    href: "/node-expansion",
   },
   {
     node: "04",
@@ -45,7 +45,7 @@ const ARCHIVE_NODES: AccessNodeProps[] = [
     description:
       "Stills, captures and corrupted frames pulled from forgotten channels. Some images are documentation. Some are artifacts. All of them outlived their context.",
     action: "VIEW ARCHIVE_",
-    href: "#",
+    href: "/node-expansion",
   },
   {
     node: "05",
@@ -54,7 +54,7 @@ const ARCHIVE_NODES: AccessNodeProps[] = [
     description:
       "Transmissions that were never meant to surface. Logs locked behind clearance levels that no longer exist. The deepest sediment of the archive.",
     action: "UNSEAL LOG_",
-    href: "#",
+    href: "/node-expansion",
   },
 ]
 
