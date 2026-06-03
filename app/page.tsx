@@ -13,7 +13,7 @@ const NODES: AccessNodeProps[] = [
     description:
       "Fragments, system notes and recurring signals extracted from the digital noise. No noise. Only signal. Pattern recognition in motion.",
     action: "SCAN LOGS_",
-    href: "#", // → real-time feed / logs
+    href: "https://fuorisistema.blogspot.com/2026/05/observationlogs-signal-feed.html", // → real-time feed / logs
   },
   {
     node: "02",
@@ -22,7 +22,7 @@ const NODES: AccessNodeProps[] = [
     description:
       "Interfaces shape behavior. Operators shape systems. The transition is already underway. Passive consumption ends here. Cognitive architecture begins. AI will not replace humans. Passivity will. This is the framework for refusing obsolescence.",
     action: "LOAD PROTOCOL_",
-    href: "#", // → core thesis / framework
+    href: "https://fuorisistema.blogspot.com/2026/05/theshift-cognitivetransition.html", // → core thesis / framework
   },
   {
     node: "03",
@@ -31,7 +31,7 @@ const NODES: AccessNodeProps[] = [
     description:
       "Private transmissions, structural updates and early access points delivered outside public feeds. No optimization. No engagement traps. Only sustained signal. A direct line to the evolving architecture.",
     action: "ESTABLISH LINK_",
-    href: "https://bio.site/exit_terminal", // → private channel / list
+    href: "https://tally.so/r/EkMbM4", // → private channel / list
   },
 ]
 
