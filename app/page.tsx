@@ -13,7 +13,7 @@ const NODES: AccessNodeProps[] = [
     description:
       "Fragments, system notes and recurring signals extracted from the digital noise. No noise. Only signal. Pattern recognition in motion.",
     action: "SCAN LOGS_",
-    href: "#", // → real-time feed / logs
+    href: "https://fuorisistema.blogspot.com/2026/05/observationlogs-signal-feed.html", // → real-time feed / logs
   },
   {
     node: "02",
@@ -22,7 +22,7 @@ const NODES: AccessNodeProps[] = [
     description:
       "Interfaces shape behavior. Operators shape systems. The transition is already underway. Passive consumption ends here. Cognitive architecture begins. AI will not replace humans. Passivity will. This is the framework for refusing obsolescence.",
     action: "LOAD PROTOCOL_",
-    href: "#", // → core thesis / framework
+    href: "https://fuorisistema.blogspot.com/2026/05/theshift-cognitivetransition.html", // → core thesis / framework
   },
   {
     node: "03",
@@ -31,7 +31,16 @@ const NODES: AccessNodeProps[] = [
     description:
       "Private transmissions, structural updates and early access points delivered outside public feeds. No optimization. No engagement traps. Only sustained signal. A direct line to the evolving architecture.",
     action: "ESTABLISH LINK_",
-    href: "https://bio.site/exit_terminal", // → private channel / list
+    href: "https://tally.so/r/EkMbM4", // → private channel / list
+  },
+  {
+    node: "04",
+    label: "THE_BLACK_ARCHIVE",
+    microLabels: ["restricted layer", "narrative files", "classified archive"],
+    description:
+      "A hidden archive layer containing dossiers, narrative files, field reports, image archives and restricted logs. Not a marketplace. A deeper system layer.",
+    action: "ENTER ARCHIVE_",
+    href: "/black-archive", // → hidden archive layer
   },
 ]
 
@@ -118,7 +127,7 @@ export default function Page() {
           <div className="mb-6 flex items-center gap-4 font-mono text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground">
             <span className="text-terminal">access nodes</span>
             <span className="h-px flex-1 bg-border" />
-            <span className="text-foreground/70">[ 03 ]</span>
+            <span className="text-foreground/70">[ 04 ]</span>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

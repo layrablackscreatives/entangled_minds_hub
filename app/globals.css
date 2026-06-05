@@ -473,6 +473,21 @@
   animation: ticker-scroll 28s linear infinite;
 }
 
+/* ── classified security-tape drift ── */
+@keyframes tape-drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.security-tape {
+  animation: tape-drift 22s linear infinite;
+  will-change: transform;
+}
+
 @keyframes blink {
   0%,
   49% {
@@ -495,8 +510,9 @@
   .crt-screen::after,
   .glitch-title::before,
   .glitch-title::after,
-  .ticker-track,
-  .cursor-blink {
+    .ticker-track,
+    .security-tape,
+    .cursor-blink {
     animation: none;
   }
 }
