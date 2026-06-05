@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { SystemChrome } from "@/components/system-chrome"
 import { SystemFooter } from "@/components/system-footer"
 import { OperationalTicker } from "@/components/operational-ticker"
@@ -41,7 +42,7 @@ const FRAGMENTS = [
 
 export default function ObservationLogsPage() {
   return (
-    <div className="crt-screen noise-overlay scanlines relative min-h-screen overflow-hidden bg-background text-foreground">
+    <div className="archive-amber crt-screen noise-overlay scanlines relative min-h-screen overflow-hidden bg-background text-foreground">
       <SystemChrome />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-4xl flex-col px-6 lg:px-16">
@@ -86,6 +87,33 @@ export default function ObservationLogsPage() {
             <p>Cognitive fragments, pattern notes and micro-signals.</p>
             <p>System observations extracted from the noise — and still accumulating.</p>
           </div>
+
+          {/* hero cover visual — archive-framed */}
+          <figure className="group relative mt-4 border border-border">
+            <span className="pointer-events-none absolute -left-px -top-px z-10 h-3 w-3 border-l border-t border-terminal/60" />
+            <span className="pointer-events-none absolute -right-px -top-px z-10 h-3 w-3 border-r border-t border-terminal/60" />
+            <span className="pointer-events-none absolute -bottom-px -left-px z-10 h-3 w-3 border-b border-l border-terminal/60" />
+            <span className="pointer-events-none absolute -bottom-px -right-px z-10 h-3 w-3 border-b border-r border-terminal/60" />
+            <div className="flex items-center justify-between border-b border-border px-3 py-2 font-mono text-[0.55rem] uppercase tracking-[0.3em] text-terminal-dim">
+              <span className="text-terminal">// archive cover</span>
+              <span className="text-muted-foreground/70">EM-ARCHIVE-0001</span>
+            </div>
+            <Image
+              src="/observation-logs-hero.png"
+              alt="ENTANGLED_MINDS cognitive system interface — archived observation hub capture"
+              width={1536}
+              height={1030}
+              priority
+              className="h-auto w-full opacity-90 contrast-105 saturate-[0.85] transition-opacity duration-500 group-hover:opacity-100"
+            />
+            <figcaption className="flex items-center justify-between border-t border-border px-3 py-2 font-mono text-[0.55rem] uppercase tracking-[0.3em] text-muted-foreground/60">
+              <span className="flex items-center gap-2">
+                <span className="inline-block h-1 w-1 animate-pulse rounded-full bg-terminal" />
+                captured transmission
+              </span>
+              <span>hub-primary // cognitive layer</span>
+            </figcaption>
+          </figure>
 
           <p className="pt-8 font-mono text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground/60">
             scroll to read the logs ↓

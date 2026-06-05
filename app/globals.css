@@ -138,6 +138,16 @@
 }
 
 /* ───────────────────────────────────────────────
+   OBSERVATION_LOGS — amber archive accent
+   Locally remaps the terminal accent to the canonical
+   archive amber (#c49a3a). Scoped: other pages stay green.
+   ─────────────────────────────────────────────── */
+.archive-amber {
+  --terminal: #c49a3a;
+  --terminal-dim: #8c7030;
+}
+
+/* ───────────────────────────────────────────────
    CRT / CORRUPTED ARCHIVE ATMOSPHERE
    Pure visual overlays — no layout impact.
    ─────────────────────────────────────────────── */
