@@ -3,6 +3,7 @@ import Image from "next/image"
 import { SystemChrome } from "@/components/system-chrome"
 import { SystemFooter } from "@/components/system-footer"
 import { OperationalTicker } from "@/components/operational-ticker"
+import { OperativeClassification } from "@/components/operative-classification"
 
 export const metadata: Metadata = {
   title: "BLACK_ARCHIVE_01 // COGNITIVE_ECHO",
@@ -31,8 +32,6 @@ const DIAGNOSTIC_BODY = [
   ],
   ["Questo diagnostic non valuta ciò che sai.", "Valuta come interagisci."],
 ]
-
-const OPERATIVE_STATES = ["CONSUMER", "USER", "OPERATOR", "ARCHITECT"]
 
 // Predictive log / clinical readout shown beside the cover
 const DOSSIER_READOUT = [
@@ -135,26 +134,8 @@ export default function CognitiveEchoPage() {
             ))}
           </div>
 
-          {/* operative state classification */}
-          <div className="flex flex-col gap-4">
-            <p className="font-mono text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground">
-              Identificherà il tuo stato operativo attuale:
-            </p>
-            <div className="flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-[0.2em]">
-              {OPERATIVE_STATES.map((state, i) => (
-                <span key={state} className="flex items-center gap-2">
-                  <span className="border border-paper-blue/40 px-3 py-1.5 text-paper-blue transition-colors hover:bg-paper-blue hover:text-background">
-                    {state}
-                  </span>
-                  {i < OPERATIVE_STATES.length - 1 && <span className="text-paper-blue-dim">/</span>}
-                </span>
-              ))}
-            </div>
-            <div className="max-w-md space-y-1 text-pretty text-sm leading-relaxed text-muted-foreground">
-              <p>La differenza non è tecnica.</p>
-              <p className="text-paper-blue">È cognitiva.</p>
-            </div>
-          </div>
+          {/* operative state classification — interactive classified files */}
+          <OperativeClassification />
 
           {/* access CTA */}
           <div className="flex flex-col gap-4 pt-2">
