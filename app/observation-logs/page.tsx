@@ -4,42 +4,42 @@ import { SystemFooter } from "@/components/system-footer"
 import { OperationalTicker } from "@/components/operational-ticker"
 
 export const metadata: Metadata = {
-  title: "THE_SHIFT // ENTANGLED_MINDS",
+  title: "OBSERVATION_LOGS // ENTANGLED_MINDS",
   description:
-    "Not awakening. Another cage. THE_SHIFT is not information. It is perception restructuring. A threshold for those who only changed operating systems.",
+    "A living archive of cognitive fragments, pattern notes, micro-signals and system observations from ENTANGLED_MINDS. Ongoing transmissions. Continuously updated logs.",
 }
 
-// Editable external destination for the final CTA.
-const ENTER_SYSTEM_URL = "/operator-protocol"
+// Editable external destination for the final archive CTA.
+const ENTER_ARCHIVE_URL = "https://fuorisistema.blogspot.com/p/deposito-di-micro-segnali-note-di-campo.html"
 
 const FRAGMENTS = [
   {
-    tag: "// terminal observation",
+    tag: "// micro-signal",
     body: "You did not leave the system. You logged into a quieter one.",
   },
   {
-    tag: "// cognitive statement",
+    tag: "// pattern note",
     body: "Freedom that requires no discipline was never freedom. It was a softer enclosure.",
   },
   {
-    tag: "// philosophical interruption",
+    tag: "// field observation",
     body: "The most effective cage is the one you decorate yourself and call a worldview.",
   },
   {
-    tag: "// system warning",
+    tag: "// system note",
     body: "Comfort is a containment protocol. It does not restrain you. It convinces you not to move.",
   },
   {
-    tag: "// terminal observation",
+    tag: "// recurring signal",
     body: "You were given new language, new rituals, new gurus. The architecture underneath never changed.",
   },
   {
-    tag: "// cognitive statement",
+    tag: "// cognitive fragment",
     body: "Rebellion that fits neatly inside the market is not rebellion. It is a product line.",
   },
 ]
 
-export default function TheShiftPage() {
+export default function ObservationLogsPage() {
   return (
     <div className="crt-screen noise-overlay scanlines relative min-h-screen overflow-hidden bg-background text-foreground">
       <SystemChrome />
@@ -54,11 +54,11 @@ export default function TheShiftPage() {
             >
               {"<"} EM
             </a>
-            <span className="hidden sm:inline">ENTANGLED_MINDS // THE_SHIFT</span>
+            <span className="hidden sm:inline">ENTANGLED_MINDS // OBSERVATION_LOGS</span>
           </div>
           <span className="flex items-center gap-2 text-terminal">
             <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-terminal" />
-            THRESHOLD_OPEN
+            LOGS_STREAMING
           </span>
         </header>
 
@@ -66,33 +66,33 @@ export default function TheShiftPage() {
         <section className="flex min-h-[88vh] flex-col justify-center gap-10 py-24">
           <p className="flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.4em] text-terminal">
             <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-terminal" />
-            // manifesto gateway
+            // living archive layer
           </p>
 
           <h1
-            data-text="THE_SHIFT"
-            className="glitch-title crt-aberration text-balance font-mono text-5xl font-semibold leading-none tracking-tight text-foreground sm:text-7xl lg:text-8xl"
+            data-text="OBSERVATION_LOGS"
+            className="glitch-title crt-aberration text-balance font-mono text-4xl font-semibold leading-none tracking-tight text-foreground sm:text-6xl lg:text-7xl"
           >
-            THE_SHIFT
+            OBSERVATION_LOGS
             <span className="cursor-blink ml-2 text-terminal">_</span>
           </h1>
 
           <div className="space-y-1 font-mono text-xl tracking-wide text-foreground sm:text-3xl">
-            <p>Not awakening.</p>
-            <p className="text-terminal">Another cage.</p>
+            <p>Ongoing transmissions.</p>
+            <p className="text-terminal">Continuously updated logs.</p>
           </div>
 
           <div className="max-w-md space-y-1 text-pretty text-sm leading-relaxed text-muted-foreground">
-            <p>Most people think they escaped the system.</p>
-            <p>They only changed operating systems.</p>
+            <p>Cognitive fragments, pattern notes and micro-signals.</p>
+            <p>System observations extracted from the noise — and still accumulating.</p>
           </div>
 
           <p className="pt-8 font-mono text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground/60">
-            scroll to descend ↓
+            scroll to read the logs ↓
           </p>
         </section>
 
-        {/* SECTION 2 — MANIFESTO FRAGMENTS */}
+        {/* SECTION 2 — LOG FRAGMENTS */}
         <section className="flex flex-col gap-px border-y border-border py-2">
           {FRAGMENTS.map((fragment, i) => (
             <div
@@ -102,7 +102,7 @@ export default function TheShiftPage() {
               }`}
             >
               <div className="flex shrink-0 items-start gap-3 font-mono text-[0.6rem] uppercase tracking-[0.3em] text-terminal-dim sm:w-40 sm:flex-col sm:gap-2">
-                <span className="text-terminal">{String(i + 1).padStart(2, "0")}</span>
+                <span className="text-terminal">LOG_{String(i + 1).padStart(2, "0")}</span>
                 <span className="text-muted-foreground/70">{fragment.tag}</span>
               </div>
               <p className="max-w-2xl text-balance font-mono text-2xl leading-snug tracking-tight text-foreground transition-colors duration-500 group-hover:text-terminal sm:text-4xl">
@@ -112,45 +112,50 @@ export default function TheShiftPage() {
           ))}
         </section>
 
-        {/* SECTION 3 — TRANSITION MESSAGE */}
+        {/* SECTION 3 — TRANSMISSION STATEMENT */}
         <section className="flex min-h-[70vh] flex-col items-center justify-center gap-8 py-24 text-center">
           <span className="font-mono text-[0.65rem] uppercase tracking-[0.4em] text-terminal-dim">
-            // perception restructuring
+            // transmission status
           </span>
           <blockquote className="max-w-3xl text-balance font-mono text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
-            <span className="text-muted-foreground">You are not accessing information.</span>
+            <span className="text-muted-foreground">These logs are not finished.</span>
             <br />
-            You are accessing{" "}
-            <span className="text-terminal">perception restructuring</span>.
+            They are{" "}
+            <span className="text-terminal">still transmitting</span>.
           </blockquote>
         </section>
 
-        {/* SECTION 4 — FINAL CTA */}
+        {/* SECTION 4 — ARCHIVE TRANSITION */}
         <section className="flex flex-col items-center gap-10 border-t border-border py-28 text-center">
           <p className="flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.4em] text-terminal">
             <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-terminal" />
-            // threshold ready
+            // archive transition
           </p>
 
-          <h2
-            data-text="CROSS_THE_THRESHOLD"
-            className="glitch-title crt-aberration text-balance font-mono text-3xl font-semibold tracking-tight text-foreground sm:text-5xl"
-          >
-            CROSS_THE_THRESHOLD
-          </h2>
+          <blockquote className="max-w-2xl text-balance font-mono text-xl leading-snug tracking-tight text-foreground sm:text-2xl">
+            Not every signal belongs in static archives.
+            <br />
+            <span className="text-muted-foreground">
+              Some transmissions continue evolving outside the system layer.
+            </span>
+          </blockquote>
+
+          <p className="font-mono text-[0.65rem] uppercase tracking-[0.4em] text-terminal-dim">
+            Live archive. Continuous transmissions.
+          </p>
 
           <a
-            href={ENTER_SYSTEM_URL}
-            className="group relative inline-flex items-center gap-3 border border-terminal/50 px-10 py-5 font-mono text-sm uppercase tracking-[0.25em] text-terminal transition-colors duration-300 hover:bg-terminal hover:text-background"
+            href={ENTER_ARCHIVE_URL}
+            className="group relative mt-2 inline-flex items-center gap-3 border border-terminal/40 px-10 py-5 font-mono text-sm uppercase tracking-[0.25em] text-terminal transition-colors duration-300 hover:bg-terminal hover:text-background"
           >
-            <span className="pointer-events-none absolute -left-px -top-px h-2.5 w-2.5 border-l border-t border-terminal" />
-            <span className="pointer-events-none absolute -bottom-px -right-px h-2.5 w-2.5 border-b border-r border-terminal" />
+            <span className="pointer-events-none absolute -left-px -top-px h-2.5 w-2.5 border-l border-t border-terminal/60" />
+            <span className="pointer-events-none absolute -bottom-px -right-px h-2.5 w-2.5 border-b border-r border-terminal/60" />
             <span className="text-terminal-dim group-hover:text-background">{">"}</span>
-            ENTER_THE_SYSTEM_
+            ENTER_THE_ARCHIVE
           </a>
 
-          <p className="max-w-sm text-pretty text-xs leading-relaxed text-muted-foreground/70">
-            There is no return path to who you were before this page.
+          <p className="max-w-sm text-pretty text-xs leading-relaxed text-muted-foreground/60">
+            Exiting the classified interface. Entering the raw living archive.
           </p>
         </section>
       </div>
