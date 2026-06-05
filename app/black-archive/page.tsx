@@ -1,67 +1,19 @@
 import type { Metadata } from "next"
-import { AccessNode, type AccessNodeProps } from "@/components/access-node"
-import { SystemFooter } from "@/components/system-footer"
 import { SystemChrome } from "@/components/system-chrome"
+import { SystemFooter } from "@/components/system-footer"
 import { OperationalTicker } from "@/components/operational-ticker"
 
 export const metadata: Metadata = {
   title: "THE_BLACK_ARCHIVE // ENTANGLED_MINDS",
-  description: "Restricted narrative files and cognitive artifacts. A deeper layer of the ENTANGLED_MINDS system.",
+  description:
+    "Additional archive sectors are still being synchronized. A restricted expansion layer of the ENTANGLED_MINDS system.",
 }
-
-// Structural groundwork — all links temporarily point to "#".
-const ARCHIVE_NODES: AccessNodeProps[] = [
-  {
-    node: "01",
-    label: "DOSSIERS_",
-    microLabels: ["classified profiles", "case files", "sealed records"],
-    description:
-      "Compiled intelligence on subjects, systems and anomalies. Names redacted. Patterns preserved. Each file is a fragment of a larger structure waiting to be assembled.",
-    action: "OPEN DOSSIER_",
-    href: "/node-expansion",
-  },
-  {
-    node: "02",
-    label: "NARRATIVE_FILES_",
-    microLabels: ["story fragments", "encoded transmissions", "fictional truths"],
-    description:
-      "Narrative artifacts recovered from the deeper layer. Fiction and intelligence blur here. What reads like a story may be a leak. What reads like a leak may be a warning.",
-    action: "DECODE FILE_",
-    href: "/node-expansion",
-  },
-  {
-    node: "03",
-    label: "FIELD_REPORTS_",
-    microLabels: ["ground observation", "first-hand signal", "uncleared findings"],
-    description:
-      "Reports filed from inside the system. Raw, unedited, unverified. Observations gathered before the noise had a chance to bury them. Read with caution.",
-    action: "RETRIEVE REPORT_",
-    href: "/node-expansion",
-  },
-  {
-    node: "04",
-    label: "IMAGE_ARCHIVES_",
-    microLabels: ["visual evidence", "recovered frames", "static memory"],
-    description:
-      "Stills, captures and corrupted frames pulled from forgotten channels. Some images are documentation. Some are artifacts. All of them outlived their context.",
-    action: "VIEW ARCHIVE_",
-    href: "/node-expansion",
-  },
-  {
-    node: "05",
-    label: "RESTRICTED_LOGS_",
-    microLabels: ["sealed transmissions", "limited clearance", "buried signal"],
-    description:
-      "Transmissions that were never meant to surface. Logs locked behind clearance levels that no longer exist. The deepest sediment of the archive.",
-    action: "UNSEAL LOG_",
-    href: "/node-expansion",
-  },
-]
 
 export default function BlackArchivePage() {
   return (
-    <div className="crt-screen noise-overlay scanlines relative min-h-screen bg-background text-foreground">
+    <div className="crt-screen noise-overlay scanlines relative min-h-screen overflow-hidden bg-background text-foreground">
       <SystemChrome />
+
       <div className="relative z-10 mx-auto flex min-h-screen max-w-5xl flex-col px-6 lg:px-16">
         {/* top system bar */}
         <header className="flex items-center justify-between border-b border-border py-4 font-mono text-[0.65rem] uppercase tracking-[0.25em] text-muted-foreground">
@@ -70,7 +22,7 @@ export default function BlackArchivePage() {
               href="/"
               className="border border-foreground/40 px-1.5 py-0.5 text-foreground/80 transition-colors hover:border-terminal/60 hover:text-terminal"
             >
-              EM
+              {"<"} EM
             </a>
             <span className="hidden sm:inline">ENTANGLED_MINDS // BLACK_ARCHIVE</span>
           </div>
@@ -80,76 +32,51 @@ export default function BlackArchivePage() {
           </span>
         </header>
 
-        {/* HERO / ENTRY */}
-        <section className="flex flex-col justify-center gap-10 py-16 sm:py-24">
-          <div className="flex flex-col gap-6">
+        {/* CENTERED HOLDING SCREEN */}
+        <section className="relative flex flex-1 flex-col items-center justify-center py-24 text-center">
+          {/* diagonal security-tape band — classified analog warning */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-[-40%] top-1/2 z-20 -translate-y-1/2 -rotate-[14deg] select-none border-y-2 border-alert/70 bg-alert/10 py-3 backdrop-blur-[1px]"
+          >
+            <div className="security-tape flex items-center gap-6 font-mono text-xs font-semibold uppercase tracking-[0.4em] text-alert sm:text-sm">
+              {Array.from({ length: 8 }).map((_, i) => (
+                <span key={i} className="flex shrink-0 items-center gap-6 whitespace-nowrap">
+                  RESTRICTED <span className="text-alert/50">//</span> EXPANDING SYSTEM LAYER
+                  <span className="text-alert/50">×</span>
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* content sits above the band */}
+          <div className="relative z-10 flex flex-col items-center gap-8">
             <p className="flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.35em] text-alert">
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-alert" />
-              // access level — limited
+              // sector status — synchronizing
             </p>
 
             <h1
-              data-text="THE_BLACK_ARCHIVE"
-              className="glitch-title crt-aberration text-balance font-mono text-4xl font-semibold tracking-tight text-foreground sm:text-6xl"
+              data-text="NEW NODES COMING ONLINE_"
+              className="glitch-title crt-aberration text-balance font-mono text-3xl font-semibold tracking-tight text-foreground sm:text-5xl"
             >
-              THE_BLACK_ARCHIVE
+              NEW NODES COMING ONLINE
               <span className="cursor-blink ml-1 text-terminal">_</span>
             </h1>
 
-            <p className="font-mono text-sm tracking-wide text-terminal sm:text-base">
-              restricted narrative files <span className="text-terminal-dim">×</span> cognitive artifacts
+            <p className="max-w-md font-mono text-sm leading-relaxed tracking-wide text-terminal">
+              additional archive sectors are still being synchronized
             </p>
 
-            <p className="max-w-xl text-pretty text-sm leading-relaxed text-muted-foreground">
-              A deeper layer of the system containing narrative fragments, dossiers, investigations, restricted
-              transmissions and unreleased archive material.
+            <p className="max-w-md text-pretty text-sm leading-relaxed text-muted-foreground">
+              This sector of THE_BLACK_ARCHIVE has not surfaced yet. The system is still expanding. New nodes are
+              brought online as they are recovered, decrypted and cleared.
             </p>
 
-            <div className="max-w-xl space-y-4 text-pretty text-sm leading-relaxed text-muted-foreground">
-              <p>What surfaces on the main hub is the signal. This is the sediment beneath it.</p>
-              <p>
-                The Black Archive is not curated for you. It is preserved against erasure. Files are added as they are
-                recovered. Nothing here is finished. Nothing here is safe.
-              </p>
-            </div>
-
-            <p className="max-w-xl font-mono text-xs uppercase leading-relaxed tracking-[0.2em] text-foreground/60">
-              Not a feed.
-              <br />
-              A buried layer.
+            <p className="max-w-md font-mono text-[0.65rem] uppercase leading-relaxed tracking-[0.2em] text-foreground/40">
+              // hold position. transmission pending. do not refresh the signal.
             </p>
-
-            <div className="pt-2">
-              <a
-                href="#archive"
-                className="group relative inline-flex items-center gap-3 border border-alert/50 px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] text-alert transition-colors duration-300 hover:bg-alert hover:text-background"
-              >
-                <span className="pointer-events-none absolute -left-px -top-px h-2 w-2 border-l border-t border-alert" />
-                <span className="pointer-events-none absolute -bottom-px -right-px h-2 w-2 border-b border-r border-alert" />
-                <span className="text-alert/70 group-hover:text-background">{">"}</span>
-                ENTER ARCHIVE_
-              </a>
-            </div>
           </div>
-        </section>
-
-        {/* ARCHIVE NODES */}
-        <section id="archive" className="scroll-mt-8 pb-20">
-          <div className="mb-6 flex items-center gap-4 font-mono text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground">
-            <span className="text-terminal">archive nodes</span>
-            <span className="h-px flex-1 bg-border" />
-            <span className="text-foreground/70">[ 05 ]</span>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {ARCHIVE_NODES.map((node) => (
-              <AccessNode key={node.node} {...node} />
-            ))}
-          </div>
-
-          <p className="mt-8 max-w-xl font-mono text-[0.65rem] uppercase leading-relaxed tracking-[0.2em] text-foreground/40">
-            // status: groundwork. nodes pending population. transmissions incoming.
-          </p>
         </section>
       </div>
 
