@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import Link from "next/link"
 import { SystemChrome } from "@/components/system-chrome"
 import { SystemFooter } from "@/components/system-footer"
 import { OperationalTicker } from "@/components/operational-ticker"
@@ -249,7 +250,7 @@ export default function CognitiveEchoPage() {
             <p className="text-muted-foreground">Few learn to direct the system.</p>
           </div>
 
-          <a
+          <Link
             href={OPERATOR_PROTOCOL_URL}
             className="group relative inline-flex items-center gap-3 border border-paper-blue/50 px-8 py-4 font-mono text-xs uppercase tracking-[0.2em] text-paper-blue transition-colors duration-300 hover:bg-paper-blue hover:text-background"
           >
@@ -257,7 +258,7 @@ export default function CognitiveEchoPage() {
             <span className="pointer-events-none absolute -bottom-px -right-px h-2 w-2 border-b border-r border-paper-blue" />
             <span className="text-paper-blue-dim group-hover:text-background">{">"}</span>
             ACCESS_OPERATOR_PROTOCOL_
-          </a>
+          </Link>
         </section>
       </div>
 
