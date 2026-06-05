@@ -107,6 +107,8 @@
   --color-terminal: var(--terminal);
   --color-terminal-dim: var(--terminal-dim);
   --color-alert: var(--alert);
+  --color-paper-blue: var(--paper-blue);
+  --color-paper-blue-dim: var(--paper-blue-dim);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
