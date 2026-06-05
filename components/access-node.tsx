@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 
 export interface AccessNodeProps {
   /** node identifier, e.g. "01" */
@@ -16,13 +17,25 @@ export interface AccessNodeProps {
 }
 
 export function AccessNode({ node, label, microLabels, description, action, href }: AccessNodeProps) {
+  // Internal routes (e.g. "/black-archive") navigate within the public site in the same tab.
+  // External links (http/https) open in a new tab.
+  const isExternal = /^https?:\/\//i.test(href)
+  const sharedClassName =
+    "group relative flex flex-col justify-between gap-8 border border-border bg-card/40 p-6 transition-colors duration-300 hover:border-terminal/40 hover:bg-card/70 sm:p-8"
+
+  const LinkWrapper = ({ children }: { children: React.ReactNode }) =>
+    isExternal ? (
+      <a href={href} target="_blank" rel="noreferrer" className={sharedClassName}>
+        {children}
+      </a>
+    ) : (
+      <Link href={href} className={sharedClassName}>
+        {children}
+      </Link>
+    )
+
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="group relative flex flex-col justify-between gap-8 border border-border bg-card/40 p-6 transition-colors duration-300 hover:border-terminal/40 hover:bg-card/70 sm:p-8"
-    >
+    <LinkWrapper>
       {/* surveillance corner brackets */}
       <span className="pointer-events-none absolute left-0 top-0 h-3 w-3 border-l border-t border-foreground/30 transition-colors group-hover:border-terminal/80" />
       <span className="pointer-events-none absolute right-0 top-0 h-3 w-3 border-r border-t border-foreground/30 transition-colors group-hover:border-terminal/80" />
@@ -55,6 +68,6 @@ export function AccessNode({ node, label, microLabels, description, action, href
         <span>{action}</span>
         <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </div>
-    </a>
+    </LinkWrapper>
   )
 }
