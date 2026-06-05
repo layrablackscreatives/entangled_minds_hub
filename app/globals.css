@@ -148,6 +148,16 @@
 }
 
 /* ───────────────────────────────────────────────
+   THE_SHIFT — liminal violet transition accent
+   Locally remaps the terminal accent to the canonical
+   THE_SHIFT violet (#6d3d84). Scoped: other pages stay green.
+   ─────────────────────────────────────────────── */
+.archive-violet {
+  --terminal: #9a63b8;
+  --terminal-dim: #6d3d84;
+}
+
+/* ───────────────────────────────────────────────
    CRT / CORRUPTED ARCHIVE ATMOSPHERE
    Pure visual overlays — no layout impact.
    ─────────────────────────────────────────────── */
